@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="Section14" Database="" Version="10000">
-  <Project Name="Mystring-start" Path="Mystring-start/Mystring-start.project" Active="Yes"/>
+  <Project Name="Mystring-start" Path="Mystring-start/Mystring-start.project" Active="No"/>
+  <Project Name="Mystring-copy-assignment" Path="Mystring-copy-assignment/Mystring-copy-assignment.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
       <Project Name="Mystring-start" ConfigName="Debug"/>
+      <Project Name="Mystring-copy-assignment" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
       <Project Name="Mystring-start" ConfigName="Release"/>
+      <Project Name="Mystring-copy-assignment" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
