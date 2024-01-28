@@ -3,7 +3,8 @@
   <Project Name="Mystring-start" Path="Mystring-start/Mystring-start.project" Active="No"/>
   <Project Name="Mystring-copy-assignment" Path="Mystring-copy-assignment/Mystring-copy-assignment.project" Active="No"/>
   <Project Name="Mystring-move-assignment" Path="Mystring-move-assignment/Mystring-move-assignment.project" Active="No"/>
-  <Project Name="Mystring-operator-methods" Path="Mystring-operator-methods/Mystring-operator-methods.project" Active="Yes"/>
+  <Project Name="Mystring-operator-methods" Path="Mystring-operator-methods/Mystring-operator-methods.project" Active="No"/>
+  <Project Name="Mystring-operator-functions" Path="Mystring-operator-functions/Mystring-operator-functions.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -11,6 +12,7 @@
       <Project Name="Mystring-copy-assignment" ConfigName="Debug"/>
       <Project Name="Mystring-move-assignment" ConfigName="Debug"/>
       <Project Name="Mystring-operator-methods" ConfigName="Debug"/>
+      <Project Name="Mystring-operator-functions" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -18,6 +20,7 @@
       <Project Name="Mystring-copy-assignment" ConfigName="Release"/>
       <Project Name="Mystring-move-assignment" ConfigName="Release"/>
       <Project Name="Mystring-operator-methods" ConfigName="Release"/>
+      <Project Name="Mystring-operator-functions" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
