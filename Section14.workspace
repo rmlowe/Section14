@@ -5,7 +5,10 @@
   <Project Name="Mystring-move-assignment" Path="Mystring-move-assignment/Mystring-move-assignment.project" Active="No"/>
   <Project Name="Mystring-operator-methods" Path="Mystring-operator-methods/Mystring-operator-methods.project" Active="No"/>
   <Project Name="Mystring-operator-functions" Path="Mystring-operator-functions/Mystring-operator-functions.project" Active="No"/>
-  <Project Name="Mystring-insertion-extraction" Path="Mystring-insertion-extraction/Mystring-insertion-extraction.project" Active="Yes"/>
+  <Project Name="Mystring-insertion-extraction" Path="Mystring-insertion-extraction/Mystring-insertion-extraction.project" Active="No"/>
+  <Project Name="Challenge" Path="Challenge/Challenge.project" Active="Yes"/>
+  <Project Name="Challenge-Solution1" Path="Challenge-Solution1/Challenge-Solution1.project" Active="No"/>
+  <Project Name="Challenge-Solution2" Path="Challenge-Solution2/Challenge-Solution2.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug">
       <Environment/>
@@ -15,6 +18,9 @@
       <Project Name="Mystring-operator-methods" ConfigName="Debug"/>
       <Project Name="Mystring-operator-functions" ConfigName="Debug"/>
       <Project Name="Mystring-insertion-extraction" ConfigName="Debug"/>
+      <Project Name="Challenge" ConfigName="Debug"/>
+      <Project Name="Challenge-Solution1" ConfigName="Debug"/>
+      <Project Name="Challenge-Solution2" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release">
       <Environment/>
@@ -24,6 +30,9 @@
       <Project Name="Mystring-operator-methods" ConfigName="Release"/>
       <Project Name="Mystring-operator-functions" ConfigName="Release"/>
       <Project Name="Mystring-insertion-extraction" ConfigName="Release"/>
+      <Project Name="Challenge" ConfigName="Release"/>
+      <Project Name="Challenge-Solution1" ConfigName="Release"/>
+      <Project Name="Challenge-Solution2" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

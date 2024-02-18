@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ Mystring-insertion-extraction - Debug ]----------"
-	@cd "Mystring-insertion-extraction" && "$(MAKE)" -f  "Mystring-insertion-extraction.mk"
+	@echo "----------Building project:[ Challenge - Debug ]----------"
+	@cd "Challenge" && "$(MAKE)" -f  "Challenge.mk"
 clean:
-	@echo "----------Cleaning project:[ Mystring-insertion-extraction - Debug ]----------"
-	@cd "Mystring-insertion-extraction" && "$(MAKE)" -f  "Mystring-insertion-extraction.mk" clean
+	@echo "----------Cleaning project:[ Challenge - Debug ]----------"
+	@cd "Challenge" && "$(MAKE)" -f  "Challenge.mk" clean
