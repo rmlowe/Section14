@@ -1,5 +1,6 @@
-
-
+// Section 14
+// Challenge - Solution 2
+// Non-Member methods
 #include <iostream>
 #include "Mystring.h"
 

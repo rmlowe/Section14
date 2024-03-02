@@ -93,7 +93,6 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
-    <File Name="Description.txt"/>
     <File Name="Mystring.cpp"/>
     <File Name="Mystring.h"/>
     <File Name="main.cpp"/>

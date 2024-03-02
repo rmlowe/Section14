@@ -22,6 +22,18 @@ public:
     
     int get_length() const;                     // getters
     const char *get_str() const;
+    
+    bool operator==(const Mystring &rhs) const;
+    bool operator!=(const Mystring &rhs) const;
+    bool operator<(const Mystring &rhs) const;
+    bool operator>(const Mystring &rhs) const;
+    Mystring operator-() const;
+    Mystring operator+(const Mystring &rhs) const;
+    Mystring &operator+=(const Mystring &rhs);
+    Mystring operator*(size_t rhs) const;
+    Mystring &operator*=(size_t rhs);
+    Mystring &operator++();
+    Mystring operator++(int);
 };
 
 #endif // _MYSTRING_H_

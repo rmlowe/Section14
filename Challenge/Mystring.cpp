@@ -90,3 +90,85 @@ std::istream &operator>>(std::istream &in, Mystring &rhs) {
     return in;
 }
 
+bool Mystring::operator==(const Mystring &rhs) const {
+    return strcmp(str, rhs.str) == 0;
+}
+
+bool Mystring::operator!=(const Mystring &rhs) const {
+    return strcmp(str, rhs.str) != 0;
+}
+
+bool Mystring::operator<(const Mystring &rhs) const {
+    return strcmp(str, rhs.str) < 0;
+}
+
+bool Mystring::operator>(const Mystring &rhs) const {
+    return strcmp(str, rhs.str) > 0;
+}
+
+Mystring Mystring::operator-() const {
+    auto s = new char[get_length() + 1];
+    
+    for (size_t i = 0; i < get_length(); i++) {
+        s[i] = tolower(str[i]);
+    }
+    
+    s[get_length()] = '\0';
+    Mystring result(s);
+    delete [] s;
+    return result;
+}
+
+Mystring Mystring::operator+(const Mystring &rhs) const {
+    auto s = new char[get_length() + rhs.get_length() + 1];
+    strcpy(s, str);
+    strcat(s, rhs.str);
+    Mystring result(s);
+    delete [] s;
+    return result;
+}
+
+Mystring &Mystring::operator+=(const Mystring &rhs) {
+    Mystring concatenated = *this + rhs;
+    char *destination = new char[concatenated.get_length() + 1];
+    strcpy(destination, concatenated.str);
+    delete [] str;
+    str = destination;
+    return *this;
+}
+
+Mystring Mystring::operator*(size_t rhs) const {
+    auto s = new char[get_length() * rhs + 1];
+    strcpy(s, str);
+    
+    for (int i = 1; i < rhs; i++) {
+        strcat(s, str);
+    }
+    
+    Mystring result(s);
+    delete [] s;
+    return result;
+}
+
+Mystring &Mystring::operator*=(size_t rhs) {
+    Mystring repeated = *this * rhs;
+    char *destination = new char[repeated.get_length() + 1];
+    strcpy(destination, repeated.str);
+    delete [] str;
+    str = destination;
+    return *this;
+}
+
+Mystring &Mystring::operator++() {
+    for (size_t i = 0; i < get_length(); i++) {
+        str[i] = toupper(str[i]);
+    }
+    
+    return *this;
+}
+
+Mystring Mystring::operator++(int) {
+    Mystring temp (*this);
+    operator++();
+    return temp;
+}
