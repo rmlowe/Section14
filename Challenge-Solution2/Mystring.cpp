@@ -90,3 +90,77 @@ std::istream &operator>>(std::istream &in, Mystring &rhs) {
     return in;
 }
 
+// Equality
+bool operator==(const Mystring &lhs, const Mystring &rhs) {
+    return (std::strcmp(lhs.str, rhs.str) == 0);
+}
+
+// Not equals
+bool operator!=(const Mystring &lhs, const Mystring &rhs) {
+    return !(std::strcmp(lhs.str, rhs.str) == 0);
+}
+
+// Less than
+bool operator<(const Mystring &lhs, const Mystring &rhs) {
+    return (std::strcmp(lhs.str, rhs.str) < 0);
+}
+
+// Greater than
+bool operator>(const Mystring &lhs, const Mystring &rhs) {
+    return (std::strcmp(lhs.str, rhs.str) > 0);
+}
+
+// Make lowercase
+Mystring operator-(const Mystring &obj) {
+    char *buff = new char[std::strlen(obj.str) + 1];
+    std::strcpy(buff, obj.str);
+    for (size_t i=0; i<std::strlen(buff); i++)
+        buff[i] = std::tolower(buff[i]);
+    Mystring temp {buff};
+    delete [] buff;
+    return temp;
+}
+
+// Concatenation
+Mystring operator+(const Mystring &lhs, const Mystring &rhs) {
+    char *buff = new char[std::strlen(lhs.str) + std::strlen(rhs.str) + 1];
+    std::strcpy(buff, lhs.str);
+    std::strcat(buff, rhs.str);
+    Mystring temp {buff};
+    delete [] buff;
+    return temp;
+}
+
+// concat and assign
+Mystring &operator+=( Mystring &lhs, const Mystring &rhs) {
+    lhs = lhs + rhs;
+    return lhs;
+}
+
+// Repeat
+Mystring operator*(const Mystring &lhs, int n) {
+    Mystring temp;
+    for (int i=1; i<= n; i++)
+        temp = temp + lhs;
+    return temp;
+}
+
+// Repeat and assign
+Mystring &operator*=( Mystring &lhs, int n) {
+    lhs = lhs * n;
+    return lhs;
+}
+
+// Make uppercase - pre increment
+Mystring &operator++(Mystring &obj) {
+    for (size_t i=0; i< std::strlen(obj.str); i++)
+        obj.str[i] = std::toupper(obj.str[i]);
+    return obj;
+}
+
+// Make uppercase - post-increment
+Mystring operator++(Mystring &obj, int) {
+    Mystring temp {obj};
+    ++obj;      // make sure you call the pre-increment!
+    return temp;
+}

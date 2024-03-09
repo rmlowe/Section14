@@ -23,17 +23,28 @@ public:
     int get_length() const;                     // getters
     const char *get_str() const;
     
-    bool operator==(const Mystring &rhs) const;
-    bool operator!=(const Mystring &rhs) const;
-    bool operator<(const Mystring &rhs) const;
-    bool operator>(const Mystring &rhs) const;
-    Mystring operator-() const;
-    Mystring operator+(const Mystring &rhs) const;
-    Mystring &operator+=(const Mystring &rhs);
-    Mystring operator*(size_t rhs) const;
-    Mystring &operator*=(size_t rhs);
-    Mystring &operator++();
-    Mystring operator++(int);
+//    bool operator==(const Mystring &rhs) const;
+//    bool operator!=(const Mystring &rhs) const;
+//    bool operator<(const Mystring &rhs) const;
+//    bool operator>(const Mystring &rhs) const;
+//    Mystring operator-() const;
+//    Mystring operator+(const Mystring &rhs) const;
+//    Mystring &operator+=(const Mystring &rhs);
+//    Mystring operator*(size_t rhs) const;
+//    Mystring &operator*=(size_t rhs);
+//    Mystring &operator++();
+//    Mystring operator++(int);
+    friend bool operator==(const Mystring &lhs, const Mystring &rhs);
+    friend bool operator!=(const Mystring &lhs, const Mystring &rhs);
+    friend bool operator<(const Mystring &lhs, const Mystring &rhs);
+    friend bool operator>(const Mystring &lhs, const Mystring &rhs);
+    friend Mystring operator-(const Mystring &lhs);
+    friend Mystring operator+(const Mystring &lhs, const Mystring &rhs);
+    friend Mystring &operator+=(Mystring &lhs, const Mystring &rhs);
+    friend Mystring operator*(const Mystring &lhs, int n);
+    friend Mystring &operator*=(Mystring &lhs, int n);
+    friend Mystring &operator++(Mystring &rhs);
+    friend Mystring operator++(Mystring &lhs, int);
 };
 
 #endif // _MYSTRING_H_
